@@ -1,0 +1,36 @@
+﻿<Window x:Class="KMZI_LRU.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KMZI_LRU"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Label Content="Введите начальный вектор значений: "/>
+            <TextBox x:Name="tbVector" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" Grid.Row="1">
+            <Label Content="Введите коэффициенты: "/>
+            <TextBox x:Name="tbPi" Width="200"/>
+        </StackPanel>
+        <StackPanel Margin="0,2,0,0" Orientation="Horizontal" Grid.ColumnSpan="3" Grid.Row="2">
+            <Label Content="Введите модуль: "/>
+            <TextBox x:Name="tbMod" Width="100"/>
+            <Button x:Name="btn" Click="Btn_Click" Content="Click me!" Margin="100,0"/>
+        </StackPanel>
+        <TextBlock x:Name="tblResult" Grid.Row="3" TextWrapping="Wrap" Background="AliceBlue" Grid.ColumnSpan="3"/>
+    </Grid>
+</Window>
