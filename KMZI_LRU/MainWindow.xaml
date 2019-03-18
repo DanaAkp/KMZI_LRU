@@ -31,6 +31,6 @@
             <TextBox x:Name="tbMod" Width="100"/>
             <Button x:Name="btn" Click="Btn_Click" Content="Click me!" Margin="100,0"/>
         </StackPanel>
-        <TextBlock x:Name="tblResult" Grid.Row="3" TextWrapping="Wrap" Background="AliceBlue" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="tblResult" Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Background="AliceBlue" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

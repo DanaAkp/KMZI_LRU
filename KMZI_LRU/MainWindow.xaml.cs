@@ -38,9 +38,25 @@ namespace KMZI_LRU
                 getVector(tbVector.Text.Trim().Split(), tbPi.Text.Trim().Split());
                 c = 0;
                 max = (int)Math.Pow(p, Pi.Count) - 1;
+               // if (max < Pi.Count) max = Pi.Count;
                 LRP(ai);
                 tblResult.Text ="Период равен "+ Period(Pi.Count).ToString();
-                tblResult.Text += "\nЛРП: "+Output(ai);
+                tblResult.Text += "\nЛРП: " + Output(ai) + "\n    ";
+                for (int i = 0; i < Pi.Count-1; i++)
+                {
+                    tblResult.Text += "--->+";
+                }
+                tblResult.Text += "--->\n";
+                for (int i = 0;i<Pi.Count; i++)
+                {
+                    tblResult.Text += string.Format("   ↑*{0} ",Pi[i]);
+                }
+                tblResult.Text += "↓\n";
+                for (int i = 0; i < Pi.Count; i++)
+                {
+                    tblResult.Text += "<--" + ai[i] + " ";
+                }
+                tblResult.Text += " ↓";
             } catch(Exception ex) { MessageBox.Show(ex.Message,"Ошибка"); }
         }
 
